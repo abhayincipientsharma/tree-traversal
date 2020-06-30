@@ -1,0 +1,40 @@
+<div>
+    <div>
+        <span>
+            Number of Subjects:
+        </span>
+        <span>
+            {{subjects.length}} 
+        </span>
+        <hr>
+        <span>
+            Name of Subjects:
+        </span>
+        <span *ngFor="let subject of subjects">
+            {{subject.model.name}}, 
+        </span>
+        <hr>
+        <span *ngFor="let subject of subjects">
+            For Subject : {{subject.model.name}}
+            <ul *ngFor="let lesson of subject.model.children; index as i">
+                {{lesson.name}}
+                <ul>
+                    <span *ngFor="let module of lesson.children; index as j">
+                        <li>
+                            {{module.name}}
+                            <ul>
+                                <span *ngFor="let workbook of module.children">
+                                    <li>
+                                        {{workbook.name}}
+                                    </li>
+                                </span>
+                            </ul>
+                        </li>
+                    </span>
+                </ul>
+            </ul> 
+            <hr>
+        </span>        
+    </div>
+</div>
+

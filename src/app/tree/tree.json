@@ -1,0 +1,171 @@
+{
+  "id": 1,
+  "children": [
+      {
+          "id": 11,
+          "name": "Maths",
+          "children": [
+            {
+              "id": 111,
+              "name": "Maths Lesson  1",
+              "children": [
+                {
+                  "id": 1111,
+                  "name": "Maths Module 1",
+                  "children": [
+                    {
+                      "id": 11111,
+                      "name": "Maths Workbook 1"
+                    },
+                    {
+                      "id": 11111,
+                      "name": "Maths Workbook 2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 112,
+              "name": "Maths Lesson 2",
+              "children": [
+                {
+                  "id": 1121,
+                  "name": "Maths Module 1",
+                  "children": [
+                    {
+                      "id": 11211,
+                      "name": "Maths Workbook 1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 113,
+              "name": "Maths Lesson 3",
+              "children": [
+                {
+                  "id": 1131,
+                  "name": "Maths Module 1",
+                  "children": [
+                    {
+                      "id": 11311,
+                      "name": "Maths Workbook 1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+      },
+      {
+          "id": 12,
+          "name": "Science",
+          "children": [
+            {
+              "id": 121,
+              "name": "Science Lesson 1",
+              "children": [
+                {
+                  "id": 1211,
+                  "name": "Science Module 1",
+                  "children": [
+                    {
+                      "id": 12111,
+                      "name": "Science Workbook 1"
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "id": 122,
+              "name": "Science Lesson 2",
+              "children": [
+                {
+                  "id": 1221,
+                  "name": "Science Module 1",
+                  "children": [
+                    {
+                      "id": 12211,
+                      "name": "Science Workbook 1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 123,
+              "name": "Science Lesson 3",
+              "children": [
+                {
+                  "id": 1231,
+                  "name": "Science Module 1",
+                  "children": [
+                    {
+                      "id": 12311,
+                      "name": "Science Workbook 1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+      },
+      {
+          "id": 13,
+          "name": "Computer",
+          "children": [
+            {
+              "id": 131,
+              "name": "Computer Lesson  1",
+              "children": [
+                {
+                  "id": 1311,
+                  "name": "Computer Module 1",
+                  "children": [
+                    {
+                      "id": 13111,
+                      "name": "Computer Workbook 1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 132,
+              "name": "Computer Lesson 2",
+              "children": [
+                {
+                  "id": 1321,
+                  "name": "Computer Module 1",
+                  "children": [
+                    {
+                      "id": 13211,
+                      "name": "Computer Workbook 1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 133,
+              "name": "Computer Lesson 3",
+              "children": [
+              {
+                "id": 1331,
+                "name": "Computer Module 1",
+                "children": [
+                  {
+                    "id": 13311,
+                    "name": "Computer Workbook 1"
+                  }
+                ]
+              }
+              ]
+            }
+          ]
+      }
+  ]
+}

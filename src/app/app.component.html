@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutGap="30px" fxFlex="100%">
+  <app-tree 
+    fxFlex="20%"
+    (sentData)="receivedData($event)"
+  >
+  </app-tree>
+  <mat-divider [vertical]="true"></mat-divider>
+  <app-tree-list 
+    [passData]="jsonData"
+    fxFlex="80%"
+  >
+  </app-tree-list>
+</div>
+<router-outlet></router-outlet>

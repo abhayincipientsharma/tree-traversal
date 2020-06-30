@@ -1,0 +1,28 @@
+<div>
+    <mat-toolbar>
+        <span>Subject</span>
+    </mat-toolbar>
+    <form (ngSubmit) = "onClickSubmit(subject)" class="form-subject" #subject = "ngForm">
+        <div class="form-group">
+            <mat-form-field>
+                <input
+                    class="form-control"
+                    type="text"
+                    matInput
+                    ngModel
+                    name="subject"
+                    placeholder="Add Subject"
+                >
+            </mat-form-field>
+            <button 
+                mat-button
+                mat-raised-button
+                color="primary"
+                type="submit"
+            >   
+                Add Subject
+            </button>
+        </div>
+    </form>
+</div>
+    

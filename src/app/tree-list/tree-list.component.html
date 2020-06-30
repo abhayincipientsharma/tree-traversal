@@ -1,0 +1,71 @@
+<div fxLayout="row" fxLayoutGap="20px">
+    <div class="alert-message" fxFlex="70%">
+        *Click on icons to View the data
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Add Data To</mat-label>
+            <mat-select (selectionChange)="addData($event.value)">
+                <mat-option value="subject">Subject</mat-option>
+                <mat-option value="module">Module</mat-option>
+                <mat-option value="lesson">Lesson</mat-option>
+                <mat-option value="workbook">WorkBook</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Remove Data From</mat-label>
+            <mat-select>
+                <mat-option value="subject">Subject</mat-option>
+                <mat-option value="module">Module</mat-option>
+                <mat-option value="lesson">Lesson</mat-option>
+                <mat-option value="workbook">WorkBook</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>
+
+<div>
+    <mat-divider></mat-divider>
+   
+    <div>
+        <mat-icon *ngIf="!showSubject" (click)="revertBack()">keyboard_backspace</mat-icon>
+        <span *ngIf="showSubject">
+            SUBJECTS
+        </span>
+        <span *ngIf="showModule">
+            Modules
+        </span>
+        <span *ngIf="showLesson">
+            LESSONS
+        </span>
+    </div>
+    <mat-divider></mat-divider>
+</div>
+
+<div>
+    <div *ngIf="subjects.length > 0">
+        <div *ngIf="showSubject" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-around center">
+            <div *ngFor="let subject of subjects">
+                <mat-icon class="subject" (click)="displayContent(subject)">folder</mat-icon>
+                <p class="subject-name">{{subject.model.name}}</p>
+            </div>
+        </div>
+        <div *ngIf="showModule" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-around center">
+            <div *ngFor="let module of modules">
+                <div *ngFor="let module_name of module">
+                    <mat-icon class="subject" (click)="displayLesson(module_name)">folder</mat-icon>
+                    <p class="subject-name">{{module_name.name}}</p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="showLesson" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-around center">
+            <div *ngFor="let lesson of lessons">
+                <mat-icon class="subject">folder
+                </mat-icon>
+                <p class="subject-name">{{lesson.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

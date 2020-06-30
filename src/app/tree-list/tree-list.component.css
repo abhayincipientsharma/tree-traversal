@@ -1,0 +1,14 @@
+.alert-message {
+    color: red;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.subject {
+    font-size: 30px;
+    color: darkslateblue;
+    cursor: pointer;
+}
+.subject-name {
+    margin-top: 0;
+}
