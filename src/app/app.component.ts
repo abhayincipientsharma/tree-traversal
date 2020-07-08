@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'tree-traversal';
   jsonData: any;
+  isOneSelected: boolean;
+  clickedClick: boolean;
   // receivedData: any;
 
   ngOnInit() {

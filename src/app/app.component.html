@@ -1,14 +1,97 @@
-<div fxLayout="row" fxLayoutGap="30px" fxFlex="100%">
-  <app-tree 
+<!-- <div fxLayout="row" fxLayoutGap="30px" fxFlex="100%"> -->
+  <!-- <app-tree 
     fxFlex="20%"
     (sentData)="receivedData($event)"
-  >
-  </app-tree>
-  <mat-divider [vertical]="true"></mat-divider>
-  <app-tree-list 
+  > -->
+  <!-- </app-tree> -->
+  <!-- <mat-divider [vertical]="true"></mat-divider> -->
+  <!-- <app-tree-list 
     [passData]="jsonData"
     fxFlex="80%"
   >
-  </app-tree-list>
+  </app-tree-list> -->
+<!-- </div> -->
+<div class="container">
+  <h2>Accordion Example</h2>
+  <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          Buttons Functionality Practice
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div class="card-body">
+          <div class="container">
+            <div class="d-flex justify-content-around m-3">
+              <div class="btn btn-primary"
+                [ngStyle]="{'background-color': isOneSelected ? 'green' : 'red'}"
+                (click)="isOneSelected = !isOneSelected"
+              >Change Color on Toggle</div>
+              <div class="btn btn-primary" data-toggle="modal" data-target="#button2">Open Modal(DialogBox)</div>
+              <div class="modal fade" id="button2">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 *ngIf="!clickedClick" class="modal-title">Dialog Opened</h4>
+                      <h4 *ngIf="clickedClick" class="modal-title">Dialog Opened and Changed</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <div *ngIf="!clickedClick">
+                        Either click on close button on the top right corner of the dialog box, or click on Close button on the bottom right.
+                        Click on 'Click Here' to change the text of the dialog.
+                      </div>
+                      <div *ngIf="clickedClick">
+                        The 'Click Here' button was clicked. So the heading and the body is changed and color of the buttons are also changed.
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" *ngIf="!clickedClick" (click)="clickedClick = !clickedClick">Click Here</button>
+                      <button type="button" class="btn btn-success" *ngIf="clickedClick" (click)="clickedClick = !clickedClick">Click Again</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal" *ngIf="!clickedClick">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row"> -->
+              <!-- <div class="col">
+                <button class="btn btn-primary">Click First Button</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-primary">Click Second Button</button>
+              </div> -->
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        Dialog Functionality Practice
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          Containers Functionality Practice
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <router-outlet></router-outlet>
